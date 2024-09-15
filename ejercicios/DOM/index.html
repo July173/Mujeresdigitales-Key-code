@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>DOM-JULY</title>
     <style>
         body{
-            background-color: black;
-            color: aliceblue;
-            margin: 5rem;
+            background-color: rgba(173, 250, 255, 0.678);
+            color: rgb(121, 0, 0);
+            margin: 3rem;
         
         }
+        h2{
+            color: rgb(236, 20, 38);
+        }
         .parrafo1{
-            font-size: 25px;
-            color: yellow;
+            font-size: 22px;
+            color: rgb(0, 0, 0);
             font-weight: bold;
         }
         button{
-            padding: 2rem;
+            padding: 1rem;
             border-radius: 1rem;
             font-size: 20px;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(0, 167, 153);
+            border: none;
+            color: rgb(255, 255, 255);
+            box-shadow: 1px 1px 3px 2px rgb(0, 138, 124);
+            cursor: pointer;
+        
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Manipulacion del DOM CON js</h1>
-        <p id="miParrafo" class="parrafo1">Esto es el texto original </p>
+        <h2>¡Adivina!</h2>
+        <p id="miParrafo" class="parrafo1"> ¿Qué año del siglo 20 no cambia si les da la vuelta a sus cifras?</p>
     </header>
    <section>
-    <button id="miBoton" > Haz clic en mi!</button>
+    <button id="miBoton" > Respuesta .-.</button>
    </section>
    
 
    <script>
     const boton = document.getElementById("miBoton");
     const parrafo = document.getElementById("miParrafo");
-    const texto = " Hola soy nuevo"
+    const texto = "  El año 1961"
 
     boton.addEventListener("click", function(){
-        parrafo.innerHTML = 'Este es el texto nuevo' + texto
-        parrafo.style.color = 'blue';
-        parrafo.style.fontSize = '30px';
+        parrafo.innerHTML = 'Respuesta: ' +"</br>"+ texto ;
+        parrafo.style.color = 'black';
+        parrafo.style.fontSize = '25px';
         boton.style.backgroundColor = 'gray';
+        boton.style.boxShadow = '1px 1px 3px 2px gray';
     });
    </script>
 </body>
