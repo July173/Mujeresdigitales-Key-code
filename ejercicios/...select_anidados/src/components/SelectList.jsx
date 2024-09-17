@@ -1,13 +1,13 @@
 export const SelectList = ({ title }) => {
   const Key = `select-${title}`
   const label =title.toUpperCase(); /**el toUpperCase lo pone todo en mayusculas */
-  const options = [];
+  const option = [];
   return (
-    <>
-      <label htmlFor={Key}>{label}</label>
-      <select name={Key} id={Key}>
-        <option value="">Seleccione un {label}</option>
+    < section className="seccion1">
+      <label className="labels" htmlFor={Key}>{label}</label>
+      <select className="selects" name={Key} id={Key}>
+        <option value="">Seleccione un(a) {label}</option>
       </select>
-    </>
+    </section>
   );
 };

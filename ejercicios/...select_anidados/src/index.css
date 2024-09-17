@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(218, 188, 255);
+    text-align: center;
+}
+
+.titulo{
+    font-size: 3.5rem;
+}
+.parrafo{
+    font-weight: bold;
+    font-size: 20px;
+}
+.labels{
+    margin: 4rem 0.5rem 1rem 3rem;
+    font-weight: bold;
+    font-size: 20px;
+   
+}
+.seccion1{
+    background-color:aliceblue;
+    width: 450px;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border: none;
+    box-shadow: 2px 2px 3px 2px rgb(209, 226, 241);
+    
+}
+.seccion1:hover{
+    box-shadow: 2px 2px 5px 2px violet  ;
+    
+}
+.selects{
+    border: 1.5px solid rgb(156, 0, 0);
+    border-radius: 0.5rem;
+    margin: 2rem;
+    width: auto;
+    height: 2rem;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: rgb(255, 240, 223);
+}
