@@ -45,7 +45,7 @@ export const Selects = () => {
             <strong>Nombre:</strong> {informacion.name ?? "No hay informacion"}
           </p>
           <p>
-            <strong>Poblacion:</strong> {informacion.population ?? "no hay informacion"}
+            <strong>Poblacion:</strong> {informacion.population ?? "No hay informacion"}
           </p>
           <p>
             <strong>Codigo postal:</strong> {informacion.postalCode ?? "No hay informacion"}
