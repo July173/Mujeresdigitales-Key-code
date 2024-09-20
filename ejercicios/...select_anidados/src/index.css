@@ -40,3 +40,18 @@ body{
     font-weight: bold;
     background-color: rgb(255, 240, 223);
 }
+
+.Informacion{
+    background-color:aliceblue;
+    width: 600px;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border: none;
+    padding: 0.5rem 0rem;
+    box-shadow: 2px 2px 3px 2px rgb(209, 226, 241);
+}
+.Informacion:hover{
+    box-shadow: 2px 2px 5px 2px violet  ;
+    
+}

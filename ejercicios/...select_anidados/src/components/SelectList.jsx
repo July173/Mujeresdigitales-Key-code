@@ -4,6 +4,7 @@ export const SelectList = ({ manejadorCambio, title, url }) => {
   
   const Key = `select-${title}`;
   const label = title.toUpperCase(); /**el toUpperCase lo pone todo en mayusculas */
+  
   const { data, error, loading}= useFetch (url);
   
   if(!data){
@@ -25,8 +26,6 @@ export const SelectList = ({ manejadorCambio, title, url }) => {
       {data && options.map((option)=>(
         <option key={option.id} value={option.id}>{option.name}</option>
       ))}
-
-      
 
       </select>
     </section>
