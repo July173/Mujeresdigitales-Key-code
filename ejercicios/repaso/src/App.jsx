@@ -1,23 +1,20 @@
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { useEffect, useState } from "react";
+import {useContador} from "./hooks/useContador"
 
 const App = () => {
-  const [contador1, setContador1] = useState(0);
-  const [contador5, setContador5] = useState(0);
 
-  useEffect(()=>{
-    setContador5(contador1)
-  },[contador1])
-
-
-  const restarContador = (actualizar ,leer,  numero) => {
-    actualizar(leer - numero);
-  };
-  const sumarContador = (actualizar ,leer,  numero) => {
-    actualizar(leer + numero);
-  };
+  const {
+    title,
+    contador1,
+    contador5,
+    setContador1,
+    setContador5,
+    restarContador,
+    sumarContador,
+  } = useContador();
 
   // const restarContador2 = () => {
   //   setContador2(contador2 - 5);
@@ -36,20 +33,28 @@ const App = () => {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>{title}</h1>
       <div className="card">
         <div className="contenedorContador">
           <p>Contador 1</p>
-          <button onClick={() =>restarContador(setContador1,contador1, 1 )}>-</button>
+          <button onClick={() => restarContador(setContador1, contador1, 1)}>
+            -
+          </button>
           <p className="contador">{contador1}</p>
-          <button onClick={() =>sumarContador(setContador1,contador1, 1)}>+</button>
+          <button onClick={() => sumarContador(setContador1, contador1, 1)}>
+            +
+          </button>
         </div>
 
         <div className="contenedorContador">
           <p>Contador 5</p>
-          <button onClick={() =>restarContador(setContador5,contador5, 5 )}>-</button>
+          <button onClick={() => restarContador(setContador5, contador5, 5)}>
+            -
+          </button>
           <p className="contador">{contador5}</p>
-          <button onClick={() =>sumarContador(setContador5,contador5, 5 )}>+</button>
+          <button onClick={() => sumarContador(setContador5, contador5, 5)}>
+            +
+          </button>
         </div>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
