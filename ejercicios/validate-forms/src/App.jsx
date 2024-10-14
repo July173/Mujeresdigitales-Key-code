@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import ContactForm from './componesnts/contactForm'
-import { Loader } from './componesnts/Loader';
+import ContactForm from './componesnts/ContactForm';
 function App() {
 
   return (
@@ -9,7 +8,6 @@ function App() {
       <h1>Validate forms</h1>
       <div className="card">
        <ContactForm/>
-       <Loader/>
       </div>
      
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForms } from "../hooks/useForms";
 import { Loader } from "./Loader";
+import Mail from './Mail';
 
 const valorDefecto = {
   nombre: "",
@@ -38,14 +39,11 @@ const validaciones = (form) => {
   return errorsFormulario;
 };
 const ContactForm = () => {
-  const { form, errores, manejadorCambios, manejadorSalidaInput } = useForms(
+  const { form, errores, cargando, bd, respuesta,  manejadorCambios, manejadorSalidaInput, enviarFormulario } = useForms(
     valorDefecto,
     validaciones
   );
 
-  const enviarFormulario = () => {
-    console.log("Enviando form...");
-  };
 
   return (
     <>
@@ -56,7 +54,6 @@ const ContactForm = () => {
           type="text"
           name="nombre"
           placeholder="Escribe tu nombre..."
-          required
           value={form.nombre}
           onChange={manejadorCambios}
           onBlur={manejadorSalidaInput}
@@ -68,7 +65,6 @@ const ContactForm = () => {
           type="email"
           name="email"
           placeholder="Escribe tu correo electronico..."
-          required
           value={form.email}
           onChange={manejadorCambios}
           onBlur={manejadorSalidaInput}
@@ -81,7 +77,6 @@ const ContactForm = () => {
           type="text"
           name="asunto"
           placeholder="Asunto ..."
-          required
           value={form.asunto}
           onChange={manejadorCambios}
           onBlur={manejadorSalidaInput}
@@ -93,7 +88,6 @@ const ContactForm = () => {
         <textarea
           name="observaciones"
           placeholder=" Escribe tus observaciones..."
-          required
           cols={50}
           rows={5}
           value={form.observaciones}
@@ -106,8 +100,11 @@ const ContactForm = () => {
 
         {/*Button*/}
 
-        <input type="submit" value={"enviar"} />
+        <input type="submit" value="Enviar" disabled={cargando} className={cargando ? 'deshabilitado' : ''}/>
       </form>
+      {/* Si cargando es True renderiza <Loader/> */}
+      {cargando && <Loader/>}
+      {respuesta && <Mail datos={bd}/>}
     </>
   );
 };
