@@ -6,7 +6,7 @@ const Navbar = () => {
     setEstaAbierto(!estaAbierto);
   };
   return (
-    <nav className="flex items-center justify-between p-4 text-white bg-blue-600">
+    <nav className="myNav">
       <div className="container flex items-center justify-between">
         <div className="font-bold text-2x1">Mylogo</div>
         <div className="hidden space-x-4 md:flex">
