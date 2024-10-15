@@ -53,7 +53,7 @@ const ContactForm = () => {
         autoPlay
         loop
         muted
-        className="bottom-0 left-0 z-0 flex object-cover w-full "
+        className="bottom-0 left-0 z-0 flex object-cover w-full h-screen "
       >
         <source src={videoFile} type="video/mp4" />
         Tu navegador no soporta la reproducción de videos.
@@ -80,7 +80,7 @@ const ContactForm = () => {
           / >
             </div>
             
-          {errores.nombre && <p className="text-red-500  p-error">{errores.nombre}</p>}
+          {errores.nombre && <p className="text-red-500 p-error">{errores.nombre}</p>}
           
           <p className="mb-2 ml-12 text-lg text-left text-emerald-800">Email</p>
           <div className="relative mb-5 w-80">
