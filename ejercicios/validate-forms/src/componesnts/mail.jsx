@@ -19,11 +19,11 @@ const Mail = ({datos}) =>{
     const{ nombre= '', asunto= '', email= '', observaciones = ''} = datos
 
     return(
-        <div className= "email-contaoiner">
-            <div className="email-header">
+        <div className= "p-2 bg-gray-200 border-none rounded-md card email-container">
+            <div className="font-semibold email-header">
                 <h2>{asunto}</h2>
                 <p className="email-from">
-                    De:{""}
+                    De:{" "}
                     <span>
                         {nombre} - ({email})
                     </span>
