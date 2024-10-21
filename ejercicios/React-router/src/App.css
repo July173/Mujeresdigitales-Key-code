@@ -1,3 +1,6 @@
+.read-the-docs{
+    color: #888;
+}
 .menu{
     display:flex;
     justify-content: space-evenly;
@@ -6,5 +9,5 @@
 .active-link{
     border-bottom: thin solid black;
     padding-bottom: 0.5rem;
-    font.
+    font-weight: bold;
 }

@@ -1,15 +1,46 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <nav>
-      <NavLink to={"/"}> Home</NavLink>
-      <NavLink to={"/acerca"}> Acerca</NavLink>
-      <NavLink to={"/productos"}> Productos </NavLink>
-      <NavLink to={"/servicios"}> Servicios</NavLink>
-
+    <nav className="menu">
+      <NavLink
+        className={({ isActive }) => 
+          isActive ? "active-link" : null
+        }
+        to={"/"}
+      >
+        {" "}
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => 
+          isActive ? "active-link" : null
+        }
+        to={"/acerca"}
+      >
+        {" "}
+        Acerca
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => 
+          isActive ? "active-link" : null
+        }
+        to={"/productos"}
+      >
+        {" "}
+        Productos{" "}
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => 
+          isActive ? "active-link" : null
+        }
+        to={"/servicios"}
+      >
+        {" "}
+        Servicios
+      </NavLink>
     </nav>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
