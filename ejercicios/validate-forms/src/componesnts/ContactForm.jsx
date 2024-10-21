@@ -53,11 +53,32 @@ const ContactForm = () => {
         autoPlay
         loop
         muted
-        className="bottom-0 left-0 z-0 flex object-cover w-full h-screen "
+        className="bottom-0 left-0 z-0 flex object-cover w-full h-full "
       >
         <source src={videoFile} type="video/mp4" />
         Tu navegador no soporta la reproducción de videos.
       </video>
+   
+ 
+ 
+{/* <div className="absolute inset-0 z-[-10]">
+<video
+
+          src={videoFile} type="video/mp4"
+
+          className="absolute left-0 object-cover w-full h-full"
+
+          autoPlay
+
+          loop
+
+          muted
+
+          playsInline
+
+        /> */}
+
+ 
 
       {/* Contenido del formulario */}
       <div className="container absolute w-1/3 p-6 text-center bg-gray-300 border-none rounded-lg drop-shadow-2xl top-28 left-1/3">
