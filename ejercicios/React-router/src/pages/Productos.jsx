@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const Productos = ({ productos }) => {
   return (
     <div>
-      Productos
+      <h2>Productos</h2>
       <ul>
         {productos.map((producto) => (
           <li key={producto.id}>
